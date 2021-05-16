@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -43,11 +44,32 @@ const plugins = [
 ]
 
 if (isProd) {
-	plugins.push(new MiniCssExtractPlugin(
-		{
-			filename: `${PATHS.assets}css/${filename('css')}`,
-		}
-	))
+	plugins.push(
+		new MiniCssExtractPlugin(
+			{
+				filename: `${PATHS.assets}css/${filename('css')}`,
+			}
+		),
+		new ImageMinimizerPlugin({
+			minimizerOptions: {
+				plugins: [
+					['gifsicle', { interlaced: true }],
+					['jpegtran', { progressive: true }],
+					['optipng', { optimizationLevel: 5 }],
+					[
+						'svgo',
+						{
+							plugins: [
+								{
+									removeViewBox: false,
+								},
+							],
+						},
+					],
+				],
+			},
+		})
+	)
 }
 
 module.exports = {
@@ -137,8 +159,8 @@ module.exports = {
 		alias: {
 			'~': PATHS.src, // Пример: background-image: url("~/assets/img/image.jpg");
 			'@styles': `${PATHS.src}/pug/styles`,
-			'@blocks': `${PATHS.src}/pug/blocks`,
-			'@layout': `${PATHS.src}/pug/layout`,
+			'@components': `${PATHS.src}/pug/components`,
+			'@layout': `${PATHS.src}/pug/layouts`,
 			'@pages': `${PATHS.src}/pug/pages`,
 			'@utils': `${PATHS.src}/pug/utils`,
 		}

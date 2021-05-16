@@ -8,3 +8,4 @@ import '@styles/main.scss';
 
 // Импорт PUG
 import '@pages/index.pug';
+import '@pages/ui-kit.pug';
