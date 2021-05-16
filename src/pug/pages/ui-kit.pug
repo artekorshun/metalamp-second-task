@@ -1,5 +1,15 @@
 extends ../layouts/head.pug
+block title
+	| UI-Kit
+	
+include ../components/colors/colors
 
-block vars
-	- var pageTitle = "UI-Kit"
+block content
+	+colors('_opacity_100', 'Dark Shade 100%', value=mainColor)
+	+colors('_opacity_75', 'Dark Shade 75%', value=mainColor)
+	+colors('_opacity_50', 'Dark Shade 50%', value=mainColor)
+	+colors('_opacity_25', 'Dark Shade 25%', value=mainColor)
+	+colors('_opacity_5', 'Dark Shade 5%', value=mainColor)
+	+colors('_color_purple', 'Purple', '#BC9CFF')
+	+colors('_color_green', 'Green', '#6FCF97')
 

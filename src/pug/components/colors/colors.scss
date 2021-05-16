@@ -1,0 +1,26 @@
+@use "@styles/utils/vars.scss";
+@use "@styles/utils/mixins.scss";
+
+.colors-preview {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	&__rectangle {
+		width: 70px;
+		height: 70px;
+		border-radius: 6px;
+		background-color: vars.$color-main;
+		margin-right: 40px;
+		&_opacity {
+			&_100 {
+			}
+		}
+	}
+	&__text {
+	}
+	&__name {
+		@include mixins.main-font-bold(19px, 1);
+	}
+	&__code {
+	}
+}

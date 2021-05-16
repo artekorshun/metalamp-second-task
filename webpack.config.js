@@ -160,7 +160,7 @@ module.exports = {
 			'~': PATHS.src, // Пример: background-image: url("~/assets/img/image.jpg");
 			'@styles': `${PATHS.src}/pug/styles`,
 			'@components': `${PATHS.src}/pug/components`,
-			'@layout': `${PATHS.src}/pug/layouts`,
+			'@layouts': `${PATHS.src}/pug/layouts`,
 			'@pages': `${PATHS.src}/pug/pages`,
 			'@utils': `${PATHS.src}/pug/utils`,
 		}

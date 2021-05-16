@@ -1,6 +1,19 @@
 // ---------- Подключение шрифтов ---------- //
 
 @font-face {
-	font-family: "Roboto Regular";
-	src: url("~/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+	font-family: "Montserrat-Regular";
+	src: url("~/assets/fonts/montserrat/Montserrat-Regular.woff") format("woff"),
+		url("~/assets/fonts/montserrat/Montserrat-Regular.ttf") format("truetype"),
+		url("~/assets/fonts/montserrat/Montserrat-Regular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("~/assets/fonts/montserrat/Montserrat-Bold.woff") format("woff"),
+		url("~/assets/fonts/montserrat/Montserrat-Bold.ttf") format("truetype"),
+		url("~/assets/fonts/montserrat/Montserrat-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
 }

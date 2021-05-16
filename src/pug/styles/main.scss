@@ -1,7 +1,15 @@
 // ---------- Главный файл стилей ---------- //
 
+@use "@styles/utils/vars.scss";
 @use "@styles/utils/reset";
-@use "@styles/utils/vars";
 @use "@styles/utils/mixins";
 @use "@styles/utils/fonts";
 @use "@styles/utils/libs";
+
+@use "@layouts/colors-and-type/colors-and-type.scss";
+
+@use "@components/colors/colors.scss";
+
+body {
+	font-family: "Montserrat-Regular", sans-serif;
+}

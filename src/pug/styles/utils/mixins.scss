@@ -1,0 +1,11 @@
+// ---------- Миксины ---------- //
+
+@use "@styles/utils/vars.scss";
+
+// Шрифты
+@mixin main-font-bold($fz, $opacity) {
+	font-family: "Montserrat-Bold", sans-serif;
+	color: vars.$color-main;
+	font-size: $fz;
+	opacity: $opacity;
+}
