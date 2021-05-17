@@ -5,11 +5,14 @@ block title
 include ../components/colors/colors
 
 block content
-	+colors('_opacity_100', 'Dark Shade 100%', value=mainColor)
-	+colors('_opacity_75', 'Dark Shade 75%', value=mainColor)
-	+colors('_opacity_50', 'Dark Shade 50%', value=mainColor)
-	+colors('_opacity_25', 'Dark Shade 25%', value=mainColor)
-	+colors('_opacity_5', 'Dark Shade 5%', value=mainColor)
-	+colors('_color_purple', 'Purple', '#BC9CFF')
-	+colors('_color_green', 'Green', '#6FCF97')
+	.ui-kit-body
+		section.colors-and-type
+			.colors-and-type__colors
+				+colors('_opacity_100', 'Dark Shade 100%', value=mainColor)
+				+colors('_opacity_75', 'Dark Shade 75%', value=mainColor)
+				+colors('_opacity_50', 'Dark Shade 50%', value=mainColor)
+				+colors('_opacity_25', 'Dark Shade 25%', value=mainColor)
+				+colors('_opacity_05', 'Dark Shade 5%', value=mainColor)
+				+colors('_color_accent-1', 'Purple', '#BC9CFF')
+				+colors('_color_accent-2', 'Green', '#6FCF97')
 

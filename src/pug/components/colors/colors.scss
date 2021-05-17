@@ -1,26 +1,49 @@
 @use "@styles/utils/vars.scss";
-@use "@styles/utils/mixins.scss";
 
 .colors-preview {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	&__rectangle {
 		width: 70px;
 		height: 70px;
 		border-radius: 6px;
-		background-color: vars.$color-main;
 		margin-right: 40px;
 		&_opacity {
 			&_100 {
+				background-color: vars.$color-main;
+			}
+			&_75 {
+				background-color: vars.$color-main-opacity-75;
+			}
+			&_50 {
+				background-color: vars.$color-main-opacity-50;
+			}
+			&_25 {
+				background-color: vars.$color-main-opacity-25;
+			}
+			&_05 {
+				background-color: vars.$color-main-opacity-05;
+			}
+		}
+		&_color {
+			&_accent-1 {
+				background-color: vars.$color-accent-1;
+			}
+			&_accent-2 {
+				background-color: vars.$color-accent-2;
 			}
 		}
 	}
-	&__text {
-	}
 	&__name {
-		@include mixins.main-font-bold(19px, 1);
+		font-family: vars.$font-main-bold;
+		font-size: vars.$font-size-item-title;
+		margin-bottom: 5px;
 	}
 	&__code {
+		font-size: vars.$font-size-item-title;
 	}
 }

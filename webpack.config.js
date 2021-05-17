@@ -36,7 +36,6 @@ const plugins = [
 				minify: {
 					collapseWhitespace: isProd
 				},
-				title: 'Webpack + Pug template',
 				inject: 'body'
 			})
 	),
@@ -51,6 +50,7 @@ if (isProd) {
 			}
 		),
 		new ImageMinimizerPlugin({
+			severityError: 'warning',
 			minimizerOptions: {
 				plugins: [
 					['gifsicle', { interlaced: true }],

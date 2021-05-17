@@ -1,15 +1,20 @@
 // ---------- Главный файл стилей ---------- //
 
-@use "@styles/utils/vars.scss";
+@use "@styles/utils/vars";
 @use "@styles/utils/reset";
 @use "@styles/utils/mixins";
 @use "@styles/utils/fonts";
 @use "@styles/utils/libs";
 
-@use "@layouts/colors-and-type/colors-and-type.scss";
-
 @use "@components/colors/colors.scss";
+
+// это нужно подвинуть вверх
+// ~~~~~~~~~
+html {
+	font-size: vars.$font-size-base;
+}
 
 body {
 	font-family: "Montserrat-Regular", sans-serif;
+	color: vars.$color-main;
 }
