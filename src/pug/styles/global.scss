@@ -1,0 +1,23 @@
+// ---------- общие стили ---------- //
+
+@use "@styles/utils/vars";
+@use "@styles/utils/mixins";
+@use "@styles/utils/fonts";
+
+html {
+	@include mixins.font-main;
+	font-size: vars.$font-size-base;
+	color: vars.$color-main-dark-100;
+}
+
+.title {
+	@include mixins.title;
+}
+
+.subtitle {
+	@include mixins.subtitle;
+}
+
+.label {
+	@include mixins.label;
+}

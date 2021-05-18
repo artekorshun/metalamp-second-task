@@ -1,0 +1,6 @@
+mixin color(colorClassMod, colorName, colorCode)
+	.color
+		div(class='color__rectangle color__rectangle_color_'+colorClassMod)
+		.color__text
+			h2.color__name= colorName
+			.color__code= colorCode

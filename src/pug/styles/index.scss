@@ -1,0 +1,11 @@
+// ---------- Главный файл стилей ---------- //
+
+@use "@styles/utils/reset";
+@use "@styles/utils/libs";
+
+@use "@styles/global";
+
+@use "@pages/ui-kit";
+
+@use "@components/color/color";
+@use "@components/font-type/font-type";
