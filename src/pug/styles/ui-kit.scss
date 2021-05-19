@@ -9,9 +9,12 @@
 	}
 }
 
+.section-wrapper {
+	padding: 145px 150px;
+}
+
 .colors-and-font-types {
 	background-color: #fff;
-	padding: 145px 150px;
 	display: flex;
 	justify-content: space-between;
 	&__colors-wrapper {
