@@ -8,7 +8,6 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
-
 	&__rectangle {
 		width: 70px;
 		height: 70px;
@@ -16,7 +15,7 @@
 		margin-right: 40px;
 		&_color {
 			&_dark-100 {
-				background-color: vars.$color-main-dark-100;
+				background-color: vars.$color-main;
 			}
 			&_dark-75 {
 				background-color: vars.$color-main-dark-75;

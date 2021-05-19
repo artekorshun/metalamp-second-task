@@ -1,16 +1,16 @@
-extends ../layouts/head.pug
+extends ../layouts/head
 block title
 	| UI-Kit
-	
-include ../components/color/color
-include ../components/font-type/font-type
+
+include ../components/color/color	
+include ../components/font-type/font-type	
 
 block content
 	.ui-kit
-		.ui-kit__logo 
-			img(src=require("~/assets/img/logo-gray.svg"), alt="")
-		section.section-wrapper.colors-and-font-types
-			.wrapper__color
+		.ui-kit__logo
+			include ../components/logo/logo_color_gray
+		section.colors-and-font-types
+			.colors-and-font-types__colors-wrapper
 				+color('dark-100', 'Dark Shade 100%', value=mainColor)
 				+color('dark-75', 'Dark Shade 75%', value=mainColor)
 				+color('dark-50', 'Dark Shade 50%', value=mainColor)
@@ -18,7 +18,7 @@ block content
 				+color('dark-05', 'Dark Shade 5%', value=mainColor)
 				+color('accent-1', 'Purple', '#BC9CFF')
 				+color('accent-2', 'Green', '#6FCF97')
-			.wrapper__font-types
+			.colors-and-font-types__types-wrapper
 				+fontType('h1', 'title', 'This one is the sub-section or widget title')
 				+fontType('h2', 'subtitle', 'Next one is the item title inside widgets')
 				+fontType('h3', 'label', 'This is a label or CTA text')

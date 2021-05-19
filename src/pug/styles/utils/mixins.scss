@@ -14,17 +14,23 @@
 }
 
 @mixin title {
-	@include font-main-bold();
+	@include font-main-bold;
 	font-size: vars.$font-size-title;
 }
 
 @mixin subtitle {
-	@include font-main-bold();
+	@include font-main-bold;
 	font-size: vars.$font-size-subtitle;
 }
 
 @mixin label {
-	@include font-main-bold();
+	@include font-main-bold;
 	font-size: vars.$font-size-label;
 	text-transform: uppercase;
+}
+
+@mixin text {
+	@include font-main;
+	font-size: vars.$font-size-main;
+	color: vars.$color-main-dark-75;
 }

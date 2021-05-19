@@ -3,9 +3,14 @@
 @use "@styles/utils/reset";
 @use "@styles/utils/libs";
 
+// Общие стили
 @use "@styles/global";
 
-@use "@pages/ui-kit";
+// Стили страниц
+@use "@styles/ui-kit";
 
+// Стили шаблонов
+
+// Стили компонентов
 @use "@components/color/color";
 @use "@components/font-type/font-type";

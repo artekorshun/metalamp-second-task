@@ -3,4 +3,15 @@
 
 .font-type {
 	display: flex;
+	&:not(:last-child) {
+		margin-bottom: 52px;
+	}
+	&__tagname {
+		flex: 0 0 37px;
+		text-align: right;
+		color: vars.$color-main-dark-25;
+		font-weight: 400;
+		margin-right: 30px;
+		text-transform: capitalize;
+	}
 }

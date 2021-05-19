@@ -7,7 +7,7 @@
 html {
 	@include mixins.font-main;
 	font-size: vars.$font-size-base;
-	color: vars.$color-main-dark-100;
+	color: vars.$color-main;
 }
 
 .title {
@@ -20,4 +20,9 @@ html {
 
 .label {
 	@include mixins.label;
+}
+
+.text {
+	@include mixins.text;
+	line-height: 2.4rem;
 }

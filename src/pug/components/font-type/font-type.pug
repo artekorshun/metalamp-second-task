@@ -1,5 +1,5 @@
 mixin fontType(tag, fontClass, description)
-	div(class=`${fontClass} font-type font-type_`+tag)
-		span(class='font-type__tagname font-type__tagname_'+tag)= tag
+	div(class=`font-type ${fontClass}`)
+		span(class='font-type__tagname')= tag
 		p(class='font-type__description')= description
 	
