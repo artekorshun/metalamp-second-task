@@ -5,3 +5,5 @@
 
 // Пример подключения:
 // import './common.js';
+
+import '@components/dropdown/dropdown';

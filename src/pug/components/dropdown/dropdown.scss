@@ -1,0 +1,61 @@
+@use "@styles/utils/mixins";
+@use "@styles/utils/vars";
+
+.dropdown {
+	position: relative;
+	&_shaded {
+	}
+	&__input {
+		@include mixins.input-style;
+		cursor: pointer;
+		&_opened {
+			border-radius: 4px 4px 0 0;
+			border: vars.$border-focused;
+			filter: vars.$drop-shadow;
+		}
+	}
+	&__icon {
+		position: absolute;
+		right: 11px;
+		top: 10px;
+		cursor: pointer;
+		color: vars.$color-main-dark-50;
+	}
+	&__options-list {
+		background: #fff;
+		border: vars.$border-focused;
+		border-top: none;
+		border-radius: 0 0 4px 4px;
+		filter: vars.$drop-shadow;
+	}
+	&__options-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 7px 7px 0 13px;
+		&:last-child {
+			padding-bottom: 7px;
+		}
+	}
+	&__option-name {
+		flex: 1 0 auto;
+	}
+	&__button {
+		background: #fff;
+		width: 30px;
+		height: 30px;
+		border: vars.$border;
+		border-radius: 50%;
+		cursor: pointer;
+		font-size: 18px;
+		color: vars.$color-main-dark-50;
+		&_disabled {
+			border: vars.$border-disabled;
+			color: vars.$color-main-dark-25;
+		}
+	}
+	&__counter {
+		width: 32px;
+		text-align: center;
+	}
+}

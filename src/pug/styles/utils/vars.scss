@@ -19,3 +19,8 @@ $font-size-label: 1.2rem;
 
 // Обводка
 $border: 1px solid $color-main-dark-25;
+$border-focused: 1px solid $color-main-dark-50;
+$border-disabled: 1px solid #eaeaed;
+
+// Тень
+$drop-shadow: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.05));

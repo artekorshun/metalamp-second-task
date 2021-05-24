@@ -1,0 +1,15 @@
+mixin dropdown(labelName, placeholder, options)
+	label(class='label')= labelName
+	.dropdown
+		input(class='dropdown__input', type='text', placeholder=placeholder, readonly)
+		span(class="material-icons dropdown__icon") expand_more
+		ul.dropdown__options-list
+			each val in options
+				li.dropdown__options-item
+					h3(class='dropdown__option-name label')= val
+					button.dropdown__button.dropdown__button_minus -
+					span.dropdown__counter.label 0
+					button.dropdown__button.dropdown__button_plus +
+
+
+

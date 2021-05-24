@@ -10,6 +10,28 @@ html {
 	color: vars.$color-main;
 }
 
+body {
+	font-size: vars.$font-size-main;
+}
+
+.material-icons {
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga";
+}
+
 .title {
 	font-size: vars.$font-size-title;
 	font-weight: 700;
@@ -30,4 +52,9 @@ html {
 	font-size: vars.$font-size-main;
 	color: vars.$color-main-dark-75;
 	line-height: 2.4rem;
+}
+
+.label > .input,
+.dropdown {
+	margin-top: 5px;
 }

@@ -1,5 +1,7 @@
 include ../../components/input/input
+include ../../components/dropdown/dropdown
 
 section.form-elements
 	.form-elements__column
 		+input('_type_text', 'Text field')(type='email', placeholder='Email')
+		+dropdown('Dropdown', 'Удобства номера', ['Спальни', 'Кровати', 'Ванные комнаты'])

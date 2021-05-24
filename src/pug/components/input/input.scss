@@ -1,15 +1,8 @@
 @use "@styles/utils/vars";
+@use "@styles/utils/mixins";
 
 .input {
-	font-family: vars.$font-main;
-	font-size: vars.$font-size-main;
-	color: vars.$color-main-dark-75;
-	border: vars.$border;
-	border-radius: 4px;
-	display: block;
-	width: 100%;
-	height: 44px;
-	padding: 0 14px;
+	@include mixins.input-style;
 	&:hover,
 	&:focus,
 	&:active {
@@ -18,8 +11,4 @@
 	&::placeholder {
 		color: vars.$color-main-dark-25;
 	}
-}
-
-.label > .input {
-	margin-top: 5px;
 }
