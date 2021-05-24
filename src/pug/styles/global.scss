@@ -5,24 +5,29 @@
 @use "@styles/utils/fonts";
 
 html {
-	@include mixins.font-main;
+	font-family: vars.$font-main;
 	font-size: vars.$font-size-base;
 	color: vars.$color-main;
 }
 
 .title {
-	@include mixins.title;
+	font-size: vars.$font-size-title;
+	font-weight: 700;
 }
 
 .subtitle {
-	@include mixins.subtitle;
+	font-size: vars.$font-size-subtitle;
+	font-weight: 700;
 }
 
 .label {
-	@include mixins.label;
+	font-size: vars.$font-size-label;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .text {
-	@include mixins.text;
+	font-size: vars.$font-size-main;
+	color: vars.$color-main-dark-75;
 	line-height: 2.4rem;
 }

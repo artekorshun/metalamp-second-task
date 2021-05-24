@@ -1,0 +1,17 @@
+include ../../components/color/color	
+include ../../components/font-type/font-type
+
+section.colors-and-font-types
+	.colors-and-font-types__colors-wrapper
+		+color('dark-100', 'Dark Shade 100%', value=mainColor)
+		+color('dark-75', 'Dark Shade 75%', value=mainColor)
+		+color('dark-50', 'Dark Shade 50%', value=mainColor)
+		+color('dark-25', 'Dark Shade 25%', value=mainColor)
+		+color('dark-05', 'Dark Shade 5%', value=mainColor)
+		+color('accent-1', 'Purple', '#BC9CFF')
+		+color('accent-2', 'Green', '#6FCF97')
+	.colors-and-font-types__types-wrapper
+		+fontType('title', 'h1', 'This one is the sub-section or widget title')
+		+fontType('subtitle', 'h2', 'Next one is the item title inside widgets')
+		+fontType('label', 'h3', 'This is a label or CTA text')
+		+fontType('text', 'body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

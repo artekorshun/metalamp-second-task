@@ -1,2 +1,9 @@
-mixin input(inputClass)
-	input(class=inputClass)&attributes(attributes)
+mixin input(inputMod, inputTitle)
+	if inputTitle
+		label(class='label')= inputTitle
+			input(class='input input'+inputMod)&attributes(attributes)
+	else
+		input(class='input input'+inputMod)&attributes(attributes)
+
+//- inputMod = модификатор для инпута
+	inputTitle = заголовок для инпута

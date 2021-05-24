@@ -10,6 +10,8 @@
 @use "@styles/ui-kit";
 
 // Стили шаблонов
+@use "@layouts/colors-and-font-types/colors-and-font-types";
+@use "@layouts/form-elements/form-elements";
 
 // Стили компонентов
 @use "@components/color/color";

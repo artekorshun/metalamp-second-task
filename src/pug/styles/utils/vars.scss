@@ -10,8 +10,12 @@ $color-accent-1: #bc9cff;
 $color-accent-2: #6fcf97;
 
 // Шрифты
+$font-main: Montserrat, Arial, sans-serif;
 $font-size-base: 62.5%; // =10px
 $font-size-title: 2.4rem;
 $font-size-subtitle: 1.9rem;
 $font-size-main: 1.4rem;
 $font-size-label: 1.2rem;
+
+// Обводка
+$border: 1px solid $color-main-dark-25;
