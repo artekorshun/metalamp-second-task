@@ -1,15 +1,38 @@
-mixin dropdown(labelName, placeholder, options)
-	label(class='label')= labelName
-	.dropdown
-		input(class='dropdown__input', type='text', placeholder=placeholder, readonly)
-		span(class="material-icons dropdown__icon") expand_more
-		ul.dropdown__options-list
-			each val in options
-				li.dropdown__options-item
-					h3(class='dropdown__option-name label')= val
-					button.dropdown__button.dropdown__button_minus -
-					span.dropdown__counter.label 0
-					button.dropdown__button.dropdown__button_plus +
-
-
-
+mixin dropdown(options)
+	-
+		const {
+			type = 'facilities'
+		} = options || {}
+	-
+		var 
+			placeholder = ''
+			items = []
+			hasButtons = false
+	if type === 'facilities'
+		-
+			placeholder = 'Удобства номера'
+			items = ['спальни', 'кровати', 'ванные комнаты']
+			dropdownClass = 'dropdown__facilities'
+	else if type === 'guests'
+		-
+			placeholder = 'Сколько гостей'
+			items = ['взрослые', 'дети', 'младенцы']
+			dropdownClass = 'dropdown__guests'
+			hasButtons = true
+	div(class='dropdown ' +`${dropdownClass}`)
+		label.dropdown__title Dropdown
+		.dropdown__button
+			input(type='text' placeholder=placeholder class='dropdown__input' readonly)
+			span(class='dropdown__icon material-icons') expand_more
+			ul.dropdown__options-list
+				each item, index in items
+					li(class='dropdown__options-item')
+						span.dropdown__option-name= item
+						button(type='button' class='dropdown__quantity-button dropdown__quantity-button-minus') -
+						span(class='dropdown__counter' data-index=index) 0
+						button(type='button' class='dropdown__quantity-button dropdown__quantity-button-plus') +
+				if hasButtons
+					li(class='dropdown__change-buttons')
+						button(type='reset' class='dropdown__change-button dropdown__change-button_clear') Очистить
+						button(type='reset' class='dropdown__change-button dropdown__change-button_apply') Применить
+							

@@ -6,3 +6,11 @@
 		flex: 0 0 320px;
 	}
 }
+
+.wrapper {
+	&__mb {
+		&_20 {
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -43,5 +43,10 @@
 		"webpack": "^5.36.1",
 		"webpack-cli": "^4.6.0",
 		"webpack-dev-server": "^3.11.2"
+	},
+	"dependencies": {
+		"imask": "^6.0.7",
+		"jquery": "^3.6.0",
+		"jquery-ui": "^1.12.1"
 	}
 }

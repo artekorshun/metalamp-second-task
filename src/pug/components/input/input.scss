@@ -1,14 +1,23 @@
 @use "@styles/utils/vars";
-@use "@styles/utils/mixins";
+@use "@styles/utils/extends";
 
 .input {
-	@include mixins.input-style;
-	&:hover,
-	&:focus,
-	&:active {
-		border: 1px solid vars.$color-main-dark-50;
+	&__label {
+		@extend .label;
 	}
-	&::placeholder {
-		color: vars.$color-main-dark-25;
+	&__field {
+		@extend .input-style;
+		width: 100%;
+		&:hover,
+		&:focus,
+		&:active {
+			border: 1px solid vars.$color-main-dark-50;
+		}
+		&::placeholder {
+			color: vars.$color-main-dark-25;
+		}
+	}
+	.input__label > .input__field {
+		margin-top: 5px;
 	}
 }

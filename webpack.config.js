@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -39,6 +40,10 @@ const plugins = [
 				inject: 'body'
 			})
 	),
+	new webpack.ProvidePlugin({
+		$: 'jquery',
+		jQuery: 'jquery',
+	}),
 	new CleanWebpackPlugin()
 ]
 

@@ -1,13 +1,34 @@
-@use "@styles/utils/mixins";
 @use "@styles/utils/vars";
+@use "@styles/utils/extends";
 
 .dropdown {
-	position: relative;
-	&_shaded {
+	&__title {
+		@extend .label;
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	&__button {
+		position: relative;
+		&:hover > .dropdown__input {
+			border: vars.$border-focused;
+		}
 	}
 	&__input {
-		@include mixins.input-style;
+		display: inline-block;
+		width: 100%;
+		height: 44px;
+		padding: 0 40px 0 14px;
+		border-radius: 4px;
+		font-size: vars.$font-size-main;
+		text-overflow: ellipsis;
+		color: vars.$color-main-dark-75;
+		border: vars.$border;
 		cursor: pointer;
+		user-select: none;
+		&:focus,
+		&:active {
+			border: vars.$border-focused;
+		}
 		&_opened {
 			border-radius: 4px 4px 0 0;
 			border: vars.$border-focused;
@@ -20,13 +41,24 @@
 		top: 10px;
 		cursor: pointer;
 		color: vars.$color-main-dark-50;
+		user-select: none;
+		&_opened {
+			transform: rotateZ(-180deg);
+		}
 	}
 	&__options-list {
-		background: #fff;
-		border: vars.$border-focused;
-		border-top: none;
-		border-radius: 0 0 4px 4px;
-		filter: vars.$drop-shadow;
+		display: none;
+		&_opened {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			background: #fff;
+			border: vars.$border-focused;
+			border-top: none;
+			border-radius: 0 0 4px 4px;
+			filter: vars.$drop-shadow;
+		}
 	}
 	&__options-item {
 		display: flex;
@@ -38,9 +70,10 @@
 		}
 	}
 	&__option-name {
+		@extend .label;
 		flex: 1 0 auto;
 	}
-	&__button {
+	&__quantity-button {
 		background: #fff;
 		width: 30px;
 		height: 30px;
@@ -49,13 +82,27 @@
 		cursor: pointer;
 		font-size: 18px;
 		color: vars.$color-main-dark-50;
-		&_disabled {
+		&[disabled] {
 			border: vars.$border-disabled;
 			color: vars.$color-main-dark-25;
 		}
 	}
 	&__counter {
+		@extend .label;
 		width: 32px;
 		text-align: center;
+	}
+	&__change-buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 19px 7px 13px 14px;
+	}
+	&__change-button {
+		@extend .label;
+		color: vars.$color-accent-1;
+		padding: 0;
+		cursor: pointer;
+		background: #fff;
 	}
 }

@@ -1,9 +1,11 @@
 mixin input(inputMod, inputTitle)
 	if inputTitle
-		label(class='label')= inputTitle
-			input(class='input input'+inputMod)&attributes(attributes)
+		.input
+			label(class='input__label')= inputTitle
+				input(class='input__field input__field'+inputMod)&attributes(attributes)
 	else
-		input(class='input input'+inputMod)&attributes(attributes)
+		.input
+			input(class='input__field input__field'+inputMod)&attributes(attributes)
 
-//- inputMod = модификатор для инпута
+//-	inputMod = модификатор для инпута
 	inputTitle = заголовок для инпута

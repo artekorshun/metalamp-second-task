@@ -1,14 +1,3 @@
 // ---------- Миксины ---------- //
 
 @use "@styles/utils/vars";
-
-@mixin input-style($width: 100%) {
-	display: block;
-	width: $width;
-	height: 44px;
-	padding: 0 14px;
-	border-radius: 4px;
-	font-size: vars.$font-size-main;
-	color: vars.$color-main-dark-75;
-	border: vars.$border;
-}

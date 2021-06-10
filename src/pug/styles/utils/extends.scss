@@ -1,1 +1,33 @@
 @use "@styles/utils/vars";
+
+.title {
+	font-size: vars.$font-size-title;
+	font-weight: 700;
+}
+
+.subtitle {
+	font-size: vars.$font-size-subtitle;
+	font-weight: 700;
+}
+
+.label {
+	font-size: vars.$font-size-label;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.text {
+	font-size: vars.$font-size-main;
+	color: vars.$color-main-dark-75;
+	line-height: 2.4rem;
+}
+
+.input-style {
+	display: block;
+	height: 44px;
+	padding: 0 14px;
+	border-radius: 4px;
+	font-size: vars.$font-size-main;
+	color: vars.$color-main-dark-75;
+	border: vars.$border;
+}
