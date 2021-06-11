@@ -1,12 +1,11 @@
 const dropdown = function (options) {
 	let minusButton = $('.dropdown__quantity-button-minus');
 	let plusButton = $('.dropdown__quantity-button-plus');
-	let clearButton = $('.dropdown__change-button_clear');
-	let applyButton = $('.dropdown__change-button_apply');
+	let clearButton = $('.dropdown__change-button-clear');
+	let applyButton = $('.dropdown__change-button-apply');
 
 	let closeDropdown = function () {
 		$('.dropdown__input').removeClass('dropdown__input_opened');
-		$('.dropdown__icon').removeClass('dropdown__icon_opened');
 		$('.dropdown__options-list').removeClass('dropdown__options-list_opened');
 	};
 
@@ -14,13 +13,11 @@ const dropdown = function (options) {
 
 	$('.dropdown__input').on('click', function () {
 		$(this).toggleClass('dropdown__input_opened');
-		$(this).siblings('.dropdown__icon').toggleClass('dropdown__icon_opened');
 		$(this).siblings('.dropdown__options-list').toggleClass('dropdown__options-list_opened');
 	});
 
 	$('.dropdown__icon').on('click', function () {
 		$(this).siblings('.dropdown__input').toggleClass('dropdown__input_opened');
-		$(this).toggleClass('dropdown__icon_opened');
 		$(this).siblings('.dropdown__options-list').toggleClass('dropdown__options-list_opened');
 	});
 

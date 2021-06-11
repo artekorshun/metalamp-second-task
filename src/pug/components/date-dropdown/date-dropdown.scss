@@ -1,0 +1,43 @@
+@use '~/../node_modules/air-datepicker/dist/css/datepicker.css';
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.date-dropdown {
+	display: flex;
+	justify-content: space-between;
+	&__title {
+		@extend .label;
+		display: inline-block;
+		position: relative;
+	}
+	&__icon {
+		position: absolute;
+		right: 11px;
+		top: 31px;
+		cursor: pointer;
+		color: vars.$color-main-dark-50;
+		user-select: none;
+	}
+	&__field {
+		@extend .input-style;
+		&_from,
+		&_to {
+			width: 150px;
+		}
+		&_range {
+			width: 320px;
+			cursor: pointer;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			border: 1px solid vars.$color-main-dark-50;
+		}
+		&::placeholder {
+			color: vars.$color-main-dark-25;
+		}
+	}
+	.date-dropdown__title > .date-dropdown__field {
+		margin-top: 5px;
+	}
+}

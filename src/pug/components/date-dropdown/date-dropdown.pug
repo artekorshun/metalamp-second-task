@@ -1,0 +1,14 @@
+mixin date-dropdown(labelNameFrom, labelNameTo, filter)
+	if filter
+		.date-dropdown
+			label.date-dropdown__title= labelNameFrom
+				span(class='date-dropdown__icon material-icons') expand_more
+				input(class='date-dropdown__field date-dropdown__field_range datepicker-here' type='text' placeholder='ДД.ММ.ГГГГ' readonly)
+	else
+		.date-dropdown
+			label.date-dropdown__title= labelNameFrom
+				span(class='date-dropdown__icon material-icons') expand_more
+				input(class='date-dropdown__field date-dropdown__field_from' type='text' placeholder='ДД.ММ.ГГГГ')
+			label.date-dropdown__title= labelNameTo
+				span(class='date-dropdown__icon material-icons') expand_more
+				input(class='date-dropdown__field date-dropdown__field_to' type='text' placeholder='ДД.ММ.ГГГГ')

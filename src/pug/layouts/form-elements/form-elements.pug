@@ -1,6 +1,7 @@
 include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/masked-text-field/masked-text-field
+include ../../components/date-dropdown/date-dropdown
 
 section.form-elements
 	.form-elements__column
@@ -12,3 +13,7 @@ section.form-elements
 			+dropdown({type: 'facilities'})
 		.wrapper__mb_20
 			+masked-text-field('Masked text field')(type='text', placeholder='ДД.ММ.ГГГГ')
+		.wrapper__mb_20
+			+date-dropdown('Date dropdown', 'Date dropdown')
+		.wrapper__mb_20
+			+date-dropdown('Filter date dropdown', '', true)

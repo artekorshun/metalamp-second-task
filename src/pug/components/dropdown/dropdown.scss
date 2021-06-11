@@ -42,9 +42,6 @@
 		cursor: pointer;
 		color: vars.$color-main-dark-50;
 		user-select: none;
-		&_opened {
-			transform: rotateZ(-180deg);
-		}
 	}
 	&__options-list {
 		display: none;
