@@ -1,0 +1,23 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.masked-text-field {
+	&__label {
+		@extend .label;
+	}
+	&__input {
+		@extend .input-style;
+		width: 100%;
+		&:hover,
+		&:focus,
+		&:active {
+			border: 1px solid vars.$color-main-dark-50;
+		}
+		&::placeholder {
+			color: vars.$color-main-dark-25;
+		}
+	}
+	.masked-text-field__label > .masked-text-field__input {
+		margin-top: 5px;
+	}
+}

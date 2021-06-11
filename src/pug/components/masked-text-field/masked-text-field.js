@@ -1,8 +1,6 @@
 import IMask from 'imask';
 
-let dateMaskedInput = document.querySelectorAll(
-	'.masked-text-field__input'
-);
+let dateMaskedInput = document.querySelectorAll('.masked-text-field__input');
 
 let maskOptions = {
 	mask: Date,

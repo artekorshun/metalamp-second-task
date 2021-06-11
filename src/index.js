@@ -12,5 +12,4 @@ import '@pages/ui-kit.pug';
 
 // Компоненты
 import '@components/dropdown/dropdown';
-import '@components/input/input';
 import '@components/masked-text-field/masked-text-field';
