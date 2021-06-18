@@ -2,6 +2,9 @@ include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/masked-text-field/masked-text-field
 include ../../components/date-dropdown/date-dropdown
+include ../../components/block-label/block-label
+include ../../components/checkbox/checkbox
+include ../../components/radio-button/radio-button
 
 section.form-elements
 	.form-elements__column
@@ -17,3 +20,13 @@ section.form-elements
 			+date-dropdown('Date dropdown', 'Date dropdown')
 		.wrapper__mb_20
 			+date-dropdown('Filter date dropdown', '', true)
+	.form-elements__column
+		.wrapper__mb_40
+			+block-label('Checkbox buttons')
+			+checkbox('Можно курить')(name='can-smoke' id='can-smoke')
+			+checkbox('Можно с питомцами')(checked name='with-pets' id='with-pets')
+			+checkbox('Можно пригласить гостей (до 10 человек)')(checked name='with-guests' id='with-guests')
+		.wrapper__mb_40
+			+block-label('Radio buttons')
+			+radio-button('Мужчина')(checked name='gender' id='male')
+			+radio-button('Женщина')(name='gender' id='female')

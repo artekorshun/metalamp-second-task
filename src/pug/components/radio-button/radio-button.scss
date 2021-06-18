@@ -1,0 +1,54 @@
+@use "@styles/utils/vars";
+
+.radio-button {
+	display: inline-flex;
+	position: relative;
+	margin-bottom: 11px;
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+	&__item {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
+		&:checked + .radio-button__title {
+			color: vars.$color-main-dark-75;
+		}
+		&:checked + .radio-button__title:before {
+			border: 1px solid vars.$color-accent-1;
+		}
+		&:checked + .radio-button__title:after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			left: 5px;
+			top: 5px;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: linear-gradient(#bc9cff, #8ba4f9);
+		}
+	}
+	&__title {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding: 0 10px 0 30px;
+		font-size: 1.4rem;
+		color: vars.$color-main-dark-50;
+		line-height: 1.8rem;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			border: vars.$border;
+			border-radius: 50%;
+			left: 0;
+			top: 0px;
+		}
+	}
+}

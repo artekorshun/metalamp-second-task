@@ -1,5 +1,6 @@
 .form-elements {
 	display: flex;
+	justify-content: space-between;
 	&__column {
 		display: flex;
 		flex-direction: column;
@@ -11,6 +12,9 @@
 	&__mb {
 		&_20 {
 			margin-bottom: 20px;
+		}
+		&_40 {
+			margin-bottom: 40px;
 		}
 	}
 }

@@ -1,0 +1,6 @@
+@use "@styles/utils/extends";
+
+.block-label {
+	@extend .label;
+	margin-bottom: 16px;
+}

@@ -1,0 +1,42 @@
+@use "@styles/utils/vars";
+
+.checkbox {
+	display: flex;
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: 11px;
+	}
+	&__item {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
+		&:checked + .checkbox__title:before {
+			content: "";
+			background: no-repeat url("@components/checkbox/checkbox.svg");
+			background-position: center 3px;
+			border: 1px solid vars.$color-accent-1;
+		}
+	}
+	&__title {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding: 0 30px;
+		font-size: 1.4rem;
+		color: vars.$color-main-dark-50;
+		line-height: 1.8rem;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			border: vars.$border;
+			border-radius: 4px;
+			left: 0;
+			top: 0px;
+		}
+	}
+}
