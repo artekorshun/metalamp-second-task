@@ -8,6 +8,7 @@ $color-main-dark-25: #1f204140;
 $color-main-dark-05: #1f20410d;
 $color-accent-1: #bc9cff;
 $color-accent-2: #6fcf97;
+$color-gradient-main: linear-gradient(#bc9cff, #8ba4f9);
 
 // Шрифты
 $font-main: Montserrat, Arial, sans-serif;
@@ -24,3 +25,5 @@ $border-disabled: 1px solid #eaeaed;
 
 // Тень
 $drop-shadow: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.05));
+
+$transition: all 0.2s ease 0s;

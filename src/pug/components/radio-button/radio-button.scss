@@ -20,15 +20,10 @@
 			border: 1px solid vars.$color-accent-1;
 		}
 		&:checked + .radio-button__title:after {
-			content: "";
-			position: absolute;
-			border-radius: 50%;
 			left: 5px;
 			top: 5px;
-			display: inline-block;
 			width: 10px;
 			height: 10px;
-			background: linear-gradient(#bc9cff, #8ba4f9);
 		}
 	}
 	&__title {
@@ -49,6 +44,19 @@
 			border-radius: 50%;
 			left: 0;
 			top: 0px;
+			transition: vars.$transition;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			left: 10px;
+			top: 10px;
+			display: inline-block;
+			width: 0px;
+			height: 0px;
+			background: vars.$color-gradient-main;
+			transition: vars.$transition;
 		}
 	}
 }

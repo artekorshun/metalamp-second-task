@@ -5,6 +5,7 @@ include ../../components/date-dropdown/date-dropdown
 include ../../components/block-label/block-label
 include ../../components/checkbox/checkbox
 include ../../components/radio-button/radio-button
+include ../../components/toggle-button/toggle-button
 
 section.form-elements
 	.form-elements__column
@@ -30,3 +31,7 @@ section.form-elements
 			+block-label('Radio buttons')
 			+radio-button('Мужчина')(checked name='gender' id='male')
 			+radio-button('Женщина')(name='gender' id='female')
+		.wrapper__mb_40
+			+block-label('Toggle')
+			+toggle-button('Получать спецпредложения')(checked name='specials')
+			+toggle-button('Получать спецпредложения')(name='specials')
