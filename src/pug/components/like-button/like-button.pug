@@ -1,0 +1,8 @@
+mixin like-button({ isLiked = false, counter = 1 })
+	-
+		var classes = ''
+		classes += isLiked ? ' like-button__button_liked' : ' like-button__button_unliked'
+	.like-button
+		button(type='button' class='like-button__button' class=classes)&attributes(attributes)
+			span(class='like-button__counter')= counter
+			

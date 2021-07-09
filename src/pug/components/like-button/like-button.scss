@@ -1,0 +1,37 @@
+@use "@styles/utils/vars";
+
+.like-button {
+	display: inline-block;
+	&__button {
+		position: relative;
+		width: 40px;
+		height: 20px;
+		background-color: #fff;
+		background-image: url("@components/like-button/like-button.svg");
+		background-repeat: no-repeat;
+		background-position: 6px center;
+		border: vars.$border;
+		border-radius: 10px;
+		cursor: pointer;
+		&_liked {
+			border: 1px solid vars.$color-accent-1;
+			background-image: url("@components/like-button/like-button_liked.svg");
+			& > .like-button__counter {
+				color: vars.$color-accent-1;
+			}
+		}
+	}
+	&__counter {
+		position: absolute;
+		text-align: center;
+		top: 2px;
+		left: 20px;
+		font-size: 10px;
+		font-family: inherit;
+		color: vars.$color-main-dark-25;
+	}
+}
+
+.like-button + .like-button {
+	margin-left: 10px;
+}

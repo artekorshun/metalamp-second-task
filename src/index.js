@@ -14,3 +14,4 @@ import '@pages/ui-kit.pug';
 import '@components/dropdown/dropdown';
 import '@components/date-dropdown/date-dropdown';
 import '@components/masked-text-field/masked-text-field';
+import '@components/like-button/like-button';

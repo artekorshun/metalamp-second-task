@@ -6,6 +6,7 @@ include ../../components/block-label/block-label
 include ../../components/checkbox/checkbox
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
+include ../../components/like-button/like-button
 
 section.form-elements
 	.form-elements__column
@@ -35,3 +36,7 @@ section.form-elements
 			+block-label('Toggle')
 			+toggle-button('Получать спецпредложения')(checked name='specials')
 			+toggle-button('Получать спецпредложения')(name='specials')
+		.wrapper__mb_40
+			+block-label('Like button')
+			+like-button({isLiked: false, counter: 2})
+			+like-button({isLiked: true, counter: 12})
