@@ -7,6 +7,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
 include ../../components/like-button/like-button
+include ../../components/rating/rating
 
 section.form-elements
 	.form-elements__column
@@ -40,3 +41,5 @@ section.form-elements
 			+block-label('Like button')
 			+like-button({isLiked: false, counter: 2})
 			+like-button({isLiked: true, counter: 12})
+		.wrapper__mb_40
+			+rating()

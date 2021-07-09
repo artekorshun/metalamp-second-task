@@ -1,0 +1,53 @@
+@use "@styles/utils/vars";
+
+.rating {
+	position: relative;
+	display: inline-block;
+	&__items {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	&__item-star {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		top: 0;
+		left: 0;
+		&:checked,
+		&:checked ~ .rating__item-label::before {
+			content: url("@components/rating/rating-star-on.svg");
+		}
+	}
+	&::before {
+		content: url("@components/rating/rating-stars-off.svg");
+		display: block;
+	}
+	&__item-label {
+		flex: 0 0 20%;
+		height: 100%;
+		cursor: pointer;
+		&::before {
+			content: url("@components/rating/rating-star-off.svg");
+			display: block;
+			position: relative;
+			top: 2px;
+			left: 2px;
+			transition: vars.$transition;
+		}
+		&:hover,
+		&:hover ~ &,
+		&:checked ~ &:hover {
+			&::before {
+				content: url("@components/rating/rating-star-on.svg");
+			}
+		}
+	}
+}
