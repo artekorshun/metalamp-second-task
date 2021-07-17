@@ -8,6 +8,7 @@ include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
 include ../../components/like-button/like-button
 include ../../components/rating/rating
+include ../../components/range-slider/range-slider
 
 section.form-elements
 	.form-elements__column
@@ -43,3 +44,6 @@ section.form-elements
 			+like-button({isLiked: true, counter: 12})
 		.wrapper__mb_40
 			+rating()
+	.form-elements__column
+		.wrapper__mb_40
+			+range-slider('Range slider')

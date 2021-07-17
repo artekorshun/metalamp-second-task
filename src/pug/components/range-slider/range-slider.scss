@@ -1,0 +1,57 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.range-slider {
+	width: 265px;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 22px;
+	}
+	&__title {
+		@extend .label;
+	}
+	&__value {
+		font-family: inherit;
+		font-size: 1.2rem;
+		color: vars.$color-main-dark-50;
+	}
+}
+
+// Cтили noUISlider
+.noUi-target {
+	height: 6px;
+	border: vars.$border;
+	border-radius: 3px;
+}
+
+.noUi-horizontal .noUi-handle {
+	height: 16px;
+	width: 16px;
+	right: -8px;
+	top: -5px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	background: linear-gradient(#6fcf97, #66d2ea);
+	box-shadow: none;
+	cursor: pointer;
+	&::after,
+	&::before {
+		display: none;
+	}
+}
+
+.noUi-connects,
+.noUi-origin {
+	top: -1px;
+}
+
+.noUi-connects {
+	height: 6px;
+	overflow: visible;
+}
+
+.noUi-connect {
+	background: linear-gradient(#6fcf97, #66d2ea);
+	overflow: visible;
+}

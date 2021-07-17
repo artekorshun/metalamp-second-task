@@ -48,6 +48,7 @@
 		"air-datepicker": "^2.2.3",
 		"imask": "^6.0.7",
 		"jquery": "^3.6.0",
-		"jquery-ui": "^1.12.1"
+		"jquery-ui": "^1.12.1",
+		"nouislider": "^15.2.0"
 	}
 }
