@@ -1,0 +1,77 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.button {
+	display: block;
+	font-family: inherit;
+	cursor: pointer;
+	height: 44px;
+	padding: 0 20px;
+	border-radius: 22px;
+	@extend .label;
+	&__type_default {
+		background: vars.$color-gradient-main;
+		color: #fff;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	&__type_ghost {
+		position: relative;
+		color: vars.$color-accent-1;
+		z-index: 999;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			bottom: 2px;
+			right: 2px;
+			background-color: #fff;
+			z-index: -1;
+			border-radius: inherit;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: vars.$color-gradient-main;
+			z-index: -2;
+			border-radius: inherit;
+		}
+		&:hover {
+			&::after {
+				opacity: 0.5;
+			}
+		}
+	}
+	&__type_link {
+		display: inline;
+		height: auto;
+		padding: 0;
+		background: none;
+		color: vars.$color-accent-1;
+		border-radius: 0;
+		&:hover {
+			color: vars.$color-main-dark-50;
+		}
+	}
+	&__type_long {
+		@extend .button__type_default;
+		width: 100%;
+		position: relative;
+		&::after {
+			content: url("@components/button/arrow_forward.svg");
+			position: absolute;
+			top: 12px;
+			right: 12px;
+		}
+	}
+}
+
+.button + .button {
+	margin-top: 30px;
+}
