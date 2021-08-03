@@ -1,0 +1,73 @@
+@use "@styles/utils/vars.scss";
+
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	display: flex;
+}
+
+.simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+}
+span.ellipse.clickable {
+	cursor: pointer;
+}
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+
+.light-theme a,
+.light-theme span {
+	color: vars.$color-main-dark-50;
+	font-family: inherit;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.light-theme a:hover,
+.light-theme li:not(.disabled):not(.active) span:hover {
+	opacity: 0.5;
+}
+
+.light-theme .current {
+	background: vars.$color-gradient-main;
+	color: #fff;
+	font-weight: 700;
+	cursor: default;
+}
+
+.light-theme .ellipse {
+	cursor: default;
+}
+
+.disabled {
+	display: none;
+}
+
+.page-link.next,
+.page-link.prev {
+	background: vars.$color-gradient-secondary;
+	color: #fff;
+}
+
+.page-link.next {
+	background: url("@components/pagination/arrow_forward.svg");
+}

@@ -10,6 +10,7 @@ include ../../components/like-button/like-button
 include ../../components/rating/rating
 include ../../components/range-slider/range-slider
 include ../../components/button/button
+include ../../components/pagination/pagination
 
 section.form-elements
 	.form-elements__column
@@ -50,7 +51,9 @@ section.form-elements
 			+range-slider('Range slider')
 		.wrapper__mb_40
 			+block-label('Buttons')
-			+button('Click me', 'button__type_default', 'button')
-			+button('Click me', 'button__type_ghost', 'button')
-			+button('Click me', 'button__type_link', 'button')
-			+button('Перейти к оплате', 'button__type_long', 'button')
+			+button('Click me', 'button__style_default', 'button')
+			+button('Click me', 'button__style_ghost', 'button')
+			+button('Click me', 'button__style_link', 'button')
+			+button('Перейти к оплате', 'button__style_long', 'button')
+		.wrapper__mb_40
+			+pagination

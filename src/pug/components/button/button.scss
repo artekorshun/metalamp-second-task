@@ -9,14 +9,15 @@
 	padding: 0 20px;
 	border-radius: 22px;
 	@extend .label;
-	&__type_default {
+	&__style_default {
 		background: vars.$color-gradient-main;
 		color: #fff;
-		&:hover {
+		&:hover,
+		&:focus {
 			opacity: 0.5;
 		}
 	}
-	&__type_ghost {
+	&__style_ghost {
 		position: relative;
 		color: vars.$color-accent-1;
 		z-index: 999;
@@ -42,25 +43,27 @@
 			z-index: -2;
 			border-radius: inherit;
 		}
-		&:hover {
+		&:hover,
+		&:focus {
 			&::after {
 				opacity: 0.5;
 			}
 		}
 	}
-	&__type_link {
+	&__style_link {
 		display: inline;
 		height: auto;
 		padding: 0;
 		background: none;
 		color: vars.$color-accent-1;
 		border-radius: 0;
-		&:hover {
+		&:hover,
+		&:focus {
 			color: vars.$color-main-dark-50;
 		}
 	}
-	&__type_long {
-		@extend .button__type_default;
+	&__style_long {
+		@extend .button__style_default;
 		width: 100%;
 		position: relative;
 		&::after {
