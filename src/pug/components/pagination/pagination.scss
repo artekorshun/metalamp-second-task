@@ -1,5 +1,14 @@
 @use "@styles/utils/vars.scss";
 
+.pagination {
+	&__simple-pagination {
+		margin-bottom: 10px;
+	}
+	&__descr {
+		color: vars.$color-main-dark-75;
+	}
+}
+
 ul.simple-pagination {
 	list-style: none;
 }
@@ -66,8 +75,31 @@ span.ellipse.clickable {
 .page-link.prev {
 	background: vars.$color-gradient-secondary;
 	color: #fff;
+	position: relative;
 }
 
 .page-link.next {
-	background: url("@components/pagination/arrow_forward.svg");
+	&::after {
+		content: url("@components/pagination/next_page.svg");
+		width: 100%;
+		height: 100%;
+		top: 11px;
+		left: 0;
+		position: absolute;
+	}
 }
+
+.page-link.prev {
+	&::after {
+		content: url("@components/pagination/prev_page.svg");
+		width: 100%;
+		height: 100%;
+		top: 11px;
+		left: 0;
+		position: absolute;
+	}
+}
+
+// .page-link.prev {
+// 	background-image: url("@components/pagination/arrow_backward.svg");
+// }
