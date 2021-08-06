@@ -11,6 +11,8 @@ include ../../components/rating/rating
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
+include ../../components/expandable-list/expandable-list
+
 
 section.form-elements
 	.form-elements__column
@@ -26,6 +28,14 @@ section.form-elements
 			+date-dropdown('Date dropdown', 'Date dropdown')
 		.wrapper__mb_20
 			+date-dropdown('Filter date dropdown', '', true)
+		.wrapper__mb20
+			+expandable-list('Expandable checkbox list')
+				+checkbox('Завтрак')(name='dinner' id='dinner')
+				+checkbox('Письменный стол')(name='desk' id='desk')
+				+checkbox('Стул для кормления')(name='feeding-chair' id='feeding-chair')
+				+checkbox('Кроватка')(name='crib' id='crib')
+				+checkbox('Телевизор')(name='tv' id='tv')
+				+checkbox('Шампунь')(name='shampoo' id='shampoo')
 	.form-elements__column
 		.wrapper__mb_40
 			+block-label('Checkbox buttons')

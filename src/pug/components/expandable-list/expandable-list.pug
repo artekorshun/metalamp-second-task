@@ -1,0 +1,7 @@
+mixin expandable-list(title)
+	.expandable-list
+		button(class='expandable-list__button' type='button')= title
+		.expandable-list__content
+			if block
+				block
+			

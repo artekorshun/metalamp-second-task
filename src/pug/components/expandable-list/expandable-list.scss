@@ -1,0 +1,25 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.expandable-list {
+	&__button {
+		@extend .label;
+		background-color: #fff;
+		cursor: pointer;
+		text-align: left;
+		padding: 0px;
+		width: 100%;
+		border: none;
+		outline: none;
+		&_active,
+		&:hover {
+		}
+	}
+	&__content {
+		margin: 17px 0;
+		background-color: #fff;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+}

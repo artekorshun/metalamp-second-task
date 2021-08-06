@@ -17,3 +17,4 @@ import '@components/masked-text-field/masked-text-field';
 import '@components/like-button/like-button';
 import '@components/range-slider/range-slider';
 import '@components/pagination/pagination';
+import '@components/expandable-list/expandable-list';
