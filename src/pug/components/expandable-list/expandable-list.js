@@ -1,10 +1,10 @@
-var coll = document.getElementsByClassName("expandable-list__button");
-var i;
+let expandableList = document.getElementsByClassName("expandable-list__button");
+let i;
 
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function () {
+for (i = 0; i < expandableList.length; i++) {
+	expandableList[i].addEventListener("click", function () {
 		this.classList.toggle("expandable-list__button_active");
-		var content = this.nextElementSibling;
+		let content = this.nextElementSibling;
 		if (content.style.maxHeight) {
 			content.style.maxHeight = null;
 		} else {

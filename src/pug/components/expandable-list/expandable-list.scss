@@ -4,6 +4,7 @@
 .expandable-list {
 	&__button {
 		@extend .label;
+		position: relative;
 		background-color: #fff;
 		cursor: pointer;
 		text-align: left;
@@ -11,15 +12,23 @@
 		width: 100%;
 		border: none;
 		outline: none;
-		&_active,
-		&:hover {
+		&::after {
+			content: url("@components/expandable-list/expandable-list_open.svg");
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&_active {
+			&::after {
+				content: url("@components/expandable-list/expandable-list_close.svg");
+			}
 		}
 	}
 	&__content {
 		margin: 17px 0;
 		background-color: #fff;
-		max-height: 0;
+		max-height: 0px;
 		overflow: hidden;
-		transition: max-height 0.2s ease-out;
+		transition: max-height 0.3s ease-out;
 	}
 }
