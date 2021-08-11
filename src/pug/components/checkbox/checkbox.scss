@@ -2,10 +2,17 @@
 
 .checkbox {
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 	height: 20px;
 	&:not(:last-child) {
 		margin-bottom: 10px;
+	}
+	&_rich {
+		height: auto;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 	&__item {
 		width: 1px;
@@ -13,6 +20,7 @@
 		overflow: hidden;
 		position: absolute;
 		clip: rect(0 0 0 0);
+		&:checked + .checkbox__title_rich:before,
 		&:checked + .checkbox__title:before {
 			content: "";
 			background: no-repeat url("@components/checkbox/checkbox.svg");
@@ -38,6 +46,21 @@
 			border-radius: 4px;
 			left: 0;
 			top: 0;
+		}
+		&_rich {
+			@extend .checkbox__title;
+			flex: 0 0 100%;
+			padding: 1px 30px;
+			margin-bottom: 5px;
+			color: vars.$color-main-dark-75;
+			font-weight: bold;
+		}
+		&_rich-descr {
+			padding: 0 30px;
+			color: vars.$color-main-dark-50;
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+			cursor: pointer;
 		}
 	}
 }

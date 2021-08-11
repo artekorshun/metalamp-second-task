@@ -56,6 +56,10 @@ section.form-elements
 			+like-button({isLiked: true, counter: 12})
 		.wrapper__mb_40
 			+rating()
+		.wrapper__mb_40
+			+block-label('Rich checkbox buttons')
+			+checkbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')(name='hallway' id='hallway')
+			+checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')(name='assistant' id='assistant')
 	.form-elements__column
 		.wrapper__mb_40
 			+range-slider('Range slider')

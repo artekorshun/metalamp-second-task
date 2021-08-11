@@ -1,4 +1,10 @@
-mixin checkbox(checkboxTitle)
-	label.checkbox
-		input(class='checkbox__item' type='checkbox')&attributes(attributes)
-		span(class='checkbox__title')= checkboxTitle
+mixin checkbox(checkboxTitle, richDescr)
+	if richDescr
+		label.checkbox.checkbox_rich
+			input(class='checkbox__item' type='checkbox')&attributes(attributes)
+			span(class='checkbox__title_rich')= checkboxTitle
+			span(class='checkbox__title_rich-descr')= richDescr
+	else
+		label.checkbox
+			input(class='checkbox__item' type='checkbox')&attributes(attributes)
+			span(class='checkbox__title')= checkboxTitle
