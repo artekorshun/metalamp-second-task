@@ -5,14 +5,27 @@
 	@extend .label;
 	&__item {
 		color: vars.$color-main-dark-75;
+		position: relative;
+		padding: 0 20px;
 		font-size: 1.4rem;
 		line-height: 2.4rem;
 		font-weight: 400;
 		text-transform: none;
-		list-style-type: disc;
-		&::marker {
-			color: vars.$color-main-dark-25;
-			font-size: 3.4rem;
+		&:first-child {
+			margin-top: 12px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: vars.$color-main-dark-25;
 		}
 	}
 }
