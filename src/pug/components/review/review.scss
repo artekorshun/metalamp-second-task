@@ -1,0 +1,12 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.review {
+	max-width: 710px;
+	&__header {
+		display: flex;
+	}
+	&__body {
+		display: flex;
+	}
+}

@@ -1,0 +1,36 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.room-detail {
+	display: flex;
+	align-items: center;
+	padding: 4px 4px 20px 4px;
+	max-width: 290px;
+	border-bottom: 1px solid vars.$color-main-dark-10;
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+	&__icon-box {
+		width: 40px;
+		height: 40px;
+		margin-right: 14px;
+	}
+	&__icon {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: vars.$color-main-dark-75;
+	}
+	&__title {
+		font-weight: 700;
+	}
+	&__descr {
+	}
+}

@@ -1,0 +1,7 @@
+mixin room-detail(roomDetailImageSrc, roomDetailTitle, roomDetailDescr)
+	.room-detail
+		.room-detail__icon-box
+			img(src=roomDetailImageSrc, alt="", class='room-detail__icon')
+		.room-detail__text
+			h3.room-detail__title= roomDetailTitle
+			span.room-detail__descr= roomDetailDescr

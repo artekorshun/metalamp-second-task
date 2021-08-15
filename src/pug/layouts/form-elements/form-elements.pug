@@ -13,6 +13,8 @@ include ../../components/button/button
 include ../../components/pagination/pagination
 include ../../components/expandable-list/expandable-list
 include ../../components/bullet-list/bullet-list
+include ../../components/room-detail/room-detail
+include ../../components/review/review
 
 
 section.form-elements
@@ -75,4 +77,10 @@ section.form-elements
 			+pagination
 		.wrapper__mb_40
 			+bullet-list('Bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+	.form-elements__row
+		.wrapper__mb_40
+			+room-detail(require('@components/room-detail/room-detail-comfort.svg'), 'Комфорт', 'Шумопоглощающие стены')
+			+room-detail(require('@components/room-detail/room-detail-convenience.svg'), 'Удобство', 'Окно в каждой из спален')
+		.wrapper__mb_40
+			+review(require('@components/review/image-1.jpg'), 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
 			
