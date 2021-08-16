@@ -1,16 +1,16 @@
 .form-elements {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column: 3;
+	gap: 20px;
 	&__column {
 		display: flex;
 		flex-direction: column;
-		flex: 0 0 320px;
-	}
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
+		max-width: 320px;
+		&_long {
+			max-width: none;
+			grid-column: 2 / 4;
+		}
 	}
 }
 

@@ -2,6 +2,7 @@
 @use "@styles/utils/extends";
 
 .input {
+	position: relative;
 	&__label {
 		@extend .label;
 	}
@@ -16,8 +17,23 @@
 		&::placeholder {
 			color: vars.$color-main-dark-25;
 		}
+		&.input__field_type_subscription {
+			width: 267px;
+		}
 	}
-	.input__label > .input__field {
+	&__submit-button {
+		position: absolute;
+		width: 44px;
+		height: 44px;
+		bottom: 0;
+		right: 53px;
+		background-color: #fff;
+		background: center url("@components/input/input-subscription-submit.svg");
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	.input__label > .input__field,
+	.input__field_type_subscription {
 		margin-top: 5px;
 	}
 }

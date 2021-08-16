@@ -1,11 +1,15 @@
-mixin input(inputMod, inputTitle)
+mixin input(inputTitle, subscription)
 	if inputTitle
 		.input
 			label(class='input__label')= inputTitle
-				input(class='input__field input__field'+inputMod)&attributes(attributes)
+			if subscription
+				input(class='input__field input__field_type_subscription')&attributes(attributes)
+				button(type='submit', class='input__submit-button')
+			else
+				input(class='input__field')&attributes(attributes)
 	else
 		.input
-			input(class='input__field input__field'+inputMod)&attributes(attributes)
+			input(class='input__field')&attributes(attributes)
 
 //-	inputMod = модификатор для инпута
 	inputTitle = заголовок для инпута

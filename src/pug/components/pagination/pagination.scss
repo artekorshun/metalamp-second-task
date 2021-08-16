@@ -1,6 +1,9 @@
 @use "@styles/utils/vars.scss";
 
 .pagination {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	&__simple-pagination {
 		margin-bottom: 10px;
 	}
@@ -34,9 +37,6 @@ ul.simple-pagination {
 span.ellipse.clickable {
 	cursor: pointer;
 }
-/*------------------------------------*\
-	Light Theme Styles
-\*------------------------------------*/
 
 .light-theme a,
 .light-theme span {
@@ -99,7 +99,3 @@ span.ellipse.clickable {
 		position: absolute;
 	}
 }
-
-// .page-link.prev {
-// 	background-image: url("@components/pagination/arrow_backward.svg");
-// }

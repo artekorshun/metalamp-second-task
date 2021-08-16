@@ -20,7 +20,7 @@ include ../../components/review/review
 section.form-elements
 	.form-elements__column
 		.wrapper__mb_20
-			+input('_type_text', 'Text field')(type='email', placeholder='Email')
+			+input('Text field')(type='email', placeholder='Email')
 		.wrapper__mb_20
 			+dropdown({type: 'guests'})
 		.wrapper__mb_20
@@ -31,7 +31,9 @@ section.form-elements
 			+date-dropdown('Date dropdown', 'Date dropdown')
 		.wrapper__mb_20
 			+date-dropdown('Filter date dropdown', '', true)
-		.wrapper__mb20
+		.wrapper__mb_20
+			+input('Subscription text field', true)(type='email', placeholder='Email')
+		.wrapper__mb_20
 			+expandable-list('Expandable checkbox list')
 				+checkbox('Завтрак')(name='dinner' id='dinner')
 				+checkbox('Письменный стол')(name='desk' id='desk')
@@ -77,10 +79,12 @@ section.form-elements
 			+pagination
 		.wrapper__mb_40
 			+bullet-list('Bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
-	.form-elements__row
+	.form-elements__column
 		.wrapper__mb_40
 			+room-detail(require('@components/room-detail/room-detail-comfort.svg'), 'Комфорт', 'Шумопоглощающие стены')
 			+room-detail(require('@components/room-detail/room-detail-convenience.svg'), 'Удобство', 'Окно в каждой из спален')
+	.form-elements__column.form-elements__column_long
 		.wrapper__mb_40
 			+review(require('@components/review/image-1.jpg'), 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
 			
+	
