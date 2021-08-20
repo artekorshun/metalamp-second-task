@@ -2,6 +2,7 @@
 
 // Импорт JS
 import './js/main';
+import 'masonry-layout/masonry.js';
 
 // Импорт SCSS
 import '@styles/index.scss';
