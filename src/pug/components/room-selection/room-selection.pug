@@ -1,0 +1,12 @@
+include ../../components/date-dropdown/date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/button/button
+
+.room-selection
+	h2.room-selection__title Найдём номера под ваши пожелания
+	.room-selection__date-dropdown
+		+date-dropdown('Прибытие', 'выезд')
+	.room-selection__guests-dropdown
+		+dropdown('Гости', {type: 'guests'})
+	.room-selection__button
+		+button('Подобрать номер', 'button__style_long', 'button')

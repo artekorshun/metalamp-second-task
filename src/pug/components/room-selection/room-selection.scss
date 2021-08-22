@@ -1,0 +1,22 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.room-selection {
+	width: 380px;
+	padding: 40px 30px 30px;
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&__date-dropdown {
+		margin-bottom: 20px;
+	}
+	&__guests-dropdown {
+		margin-bottom: 30px;
+	}
+}

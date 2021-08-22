@@ -1,4 +1,4 @@
-mixin dropdown(options)
+mixin dropdown(dropdownTitle, options)
 	-
 		const {
 			type = 'facilities'
@@ -20,7 +20,7 @@ mixin dropdown(options)
 			dropdownClass = 'dropdown__guests'
 			hasButtons = true
 	div(class='dropdown ' +`${dropdownClass}`)
-		label.dropdown__title Dropdown
+		label.dropdown__title= dropdownTitle
 		.dropdown__button
 			input(type='text' placeholder=placeholder class='dropdown__input' readonly)
 			span(class='dropdown__icon material-icons') expand_more

@@ -1,0 +1,20 @@
+include ../../components/date-dropdown/date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/button/button
+
+.room-info-card
+	.room-info-card__header
+		.room-info-card__room № 
+			span.room-info-card__room-number 888
+			span.room-info-card__room-category  Люкс
+		.room-info-card__header-price
+			span.room-info-card__price-per-day 9990
+			span.room-info-card__currency ₽
+			|  в сутки
+	.room-info-card__date-dropdown
+		+date-dropdown('Прибытие', 'Выезд')
+	.room-info-card__dropdown
+		+dropdown('Гости', {type: 'guests'})
+	.room-info-card__cost-calculation
+	.room-info-card__price
+	.room-info-card__button
