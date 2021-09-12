@@ -6,15 +6,39 @@ include ../../components/button/button
 	.room-info-card__header
 		.room-info-card__room № 
 			span.room-info-card__room-number 888
-			span.room-info-card__room-category  Люкс
+			span.room-info-card__room-category Люкс
 		.room-info-card__header-price
-			span.room-info-card__price-per-day 9990
+			span.room-info-card__price-per-day 9 990
 			span.room-info-card__currency ₽
 			|  в сутки
 	.room-info-card__date-dropdown
 		+date-dropdown('Прибытие', 'Выезд')
-	.room-info-card__dropdown
+	.room-info-card__guests-dropdown
 		+dropdown('Гости', {type: 'guests'})
 	.room-info-card__cost-calculation
-	.room-info-card__price
+		.cost-calculation__row
+			.cost-calculation__days
+				span.cost-calculation__price-per-day 9 990
+				| ₽ х 
+				span.cost-calculation__number-of-days 4 
+				| суток
+			.cost-calculation__days-total 39 960
+				span ₽
+		.cost-calculation__row
+			.cost-calculation__discount Сбор за услуги: скидка 
+				span 2 179
+				| ₽
+			p(class='cost-calculation__info' data-info-tooltip='Здесь должна быть какая-то информация') i
+			.cost-calculation__discount-total 0
+				span ₽
+		.cost-calculation__row
+			.cost-calculation__additional-services Сбор за дополнительные услуги
+			p(class='cost-calculation__info' data-info-tooltip='Здесь должна быть какая-то информация') i
+			.cost-calculation__additional-services-total 300
+				span ₽
+	.room-info-card__total-price Итого
+		hr.room-info-card__dotted-line
+		.room-info-card__total-price-number 38 081
+			span.room-info-card__total-price-currency ₽
 	.room-info-card__button
+		+button('Забронировать', 'button__style_long', 'button')
