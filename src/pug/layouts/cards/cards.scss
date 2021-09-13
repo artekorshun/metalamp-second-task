@@ -1,10 +1,9 @@
 .cards {
 	&__grid-container {
-		// display: grid;
-		// grid-template-columns: 1fr 1fr 1fr;
-		// grid-gap: 40px;
+		margin: 0 auto;
 	}
 	&__grid-item {
 		width: 380px;
+		margin-bottom: 40px;
 	}
 }

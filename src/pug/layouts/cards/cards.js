@@ -1,8 +1,9 @@
-import 'masonry-layout/masonry.js';
+import Masonry from 'masonry-layout';
 
-$('.cards__grid-container').masonry({
-	// options
-	itemSelector: '.cards__grid-item',
+var container = document.querySelector('#masonry-grid');
+var msnry = new Masonry(container, {
 	columnWidth: 380,
-	horizontalOrder: true
+	itemSelector: '.cards__grid-item',
+	gutter: 40,
+	fitWidth: true
 });
