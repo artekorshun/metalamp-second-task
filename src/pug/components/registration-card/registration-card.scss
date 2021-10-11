@@ -1,0 +1,35 @@
+@use "@styles/utils/vars";
+@use "@styles/utils/extends";
+
+.registration-card {
+	@extend .card-style;
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&__input {
+		margin-bottom: 10px;
+	}
+	&__gender {
+		margin-bottom: 25px;
+	}
+	&__birthday {
+		margin-bottom: 20px;
+	}
+	&__label {
+		@extend .label;
+		margin-bottom: 5px;
+	}
+	&__specials-toggle {
+		margin-bottom: 25px;
+	}
+	&__registration-button {
+		margin-bottom: 30px;
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

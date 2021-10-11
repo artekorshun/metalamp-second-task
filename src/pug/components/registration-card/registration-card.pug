@@ -1,0 +1,32 @@
+include ../../components/input/input
+include ../../components/masked-text-field/masked-text-field
+include ../../components/button/button
+include ../../components/radio-button/radio-button
+include ../../components/toggle-button/toggle-button
+
+.registration-card
+	h3.registration-card__title Регистрация аккаунта
+	.registration-card__form
+		.registration-card__input
+			+input()(type='text', name='name', id='registration-form-name', placeholder='Имя')
+		.registration-card__input
+			+input()(type='text', name='surname', id='registration-form-surname', placeholder='Фамилия')
+		.registration-card__gender
+			+radio-button('Мужчина')(checked name='gender' id='male')
+			+radio-button('Женщина')(name='gender' id='female')
+		.registration-card__birthday
+			+masked-text-field('Дата рождения')(type='text', placeholder='ДД.ММ.ГГГГ')
+		.registration-card__login-details
+			h3.registration-card__label Данные для входа в сервис
+			.registration-card__input
+				+input()(type='email', placeholder='Email')
+			.registration-card__input
+				+input()(type='pass', placeholder='Пароль')
+		.registration-card__specials-toggle
+			+toggle-button('Получать спецпредложения')(name='specials')
+		.registration-card__registration-button
+			+button('Зарегистрироваться', 'button__style_long', 'button')
+		.registration-card__footer
+			span.registration-card__text Уже есть аккаунт на Toxin
+			+button('Войти', 'button__style_ghost', 'button')
+		

@@ -5,5 +5,6 @@ var msnry = new Masonry(container, {
 	columnWidth: 380,
 	itemSelector: '.cards__grid-item',
 	gutter: 40,
-	fitWidth: true
+	fitWidth: true,
+	horizontalOrder: true
 });
